@@ -23,7 +23,7 @@ public class HasQuarterState implements State {
         System.out.println("You turned...");
         int winner = randomWinner.nextInt(10);
         if ((winner == 0) && (gumballMachine.getCountGumballs() > 1)) {
-            gumballMachine.setState(gumballMachine.getWinnerState());
+            gumballMachine.setState(gumballMachine.winnerState);
         } else {
             gumballMachine.setState(gumballMachine.gumballSoldState);
         }
